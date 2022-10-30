@@ -2,11 +2,9 @@
 
 ---
 
-[![N|Solid](https://i.ytimg.com/vi/54dCeUwn1CI/maxresdefault.jpg)](https://github.com/kelvyns/mutants-service)
-
 El proyecto se creo con el fin generar una API-REST que contenga dos servicios
-    1° Te permite saber si una persona es humana o mutante basandose en su ADN representado por una matriz de NxN caracteres.
-    2° Este servicio arroja estadísticas en función de los ADN estudiados. 
+    - 1° Te permite saber si una persona es humana o mutante basandose en su ADN representado por una matriz de NxN caracteres.
+    - 2° Este servicio arroja estadísticas en función de los ADN estudiados. 
 
   ----
 ## Contenido
@@ -30,9 +28,8 @@ El proyecto se creo con el fin generar una API-REST que contenga dos servicios
  * [VSC] - Ide de desarrollo
  * [CloudC9] - Servidor en la nube
  * [MongoBD] - Base de datos
- * [GitHub] - Repositorio y manual de uso
- * [Jest - Supertest] - Framework para testing
- * [JaCoCo] - Para estudiar cobertura de los test unitarios
+ * [GitHub] - Repositorio y manual de uso.
+ * [Jest - Supertest] - Testing y cobertura de codigo.
 
 
 -------
