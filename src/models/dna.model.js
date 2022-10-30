@@ -6,4 +6,5 @@ const DnaSchema = mongoose.Schema({
     hasMutant: {type: Boolean, required: true}
 })
 
+
 module.exports = mongoose.model('Dna', DnaSchema)
