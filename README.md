@@ -1,19 +1,19 @@
-# Proyecto - Servicio Rest para detectar mutantes
+# API REST para detectar mutantes
 
 ---
 
 [![N|Solid](https://i.ytimg.com/vi/54dCeUwn1CI/maxresdefault.jpg)](https://github.com/kelvyns/mutants-service)
 
-El proyecto consiste en generar una API-REST que exponga dos servicios, uno te permite saber si una persona es humano o mutante basado en su ADN representado por una matriz de NxN caracteres y también un servicio que arroje estadísticas en función de los ADN estudiados, los cuales son mutantes y o no. 
+El proyecto se creo con el fin generar una API-REST que contenga dos servicios
+    1° Te permite saber si una persona es humana o mutante basandose en su ADN representado por una matriz de NxN caracteres.
+    2° Este servicio arroja estadísticas en función de los ADN estudiados. 
 
-  - Para conocer más detalles del proyectos tenemos el archivo con las especificaciones ([Examen-Mutantes.pdf](https://github.com/kelvyns/mutants-service/blob/master/examen-mutantes.pdf))
   ----
 ## Contenido
 
-- [Arquitectura utilizada](#arquitectura)
-- [Tecnologías y herramientas](#install)
-- [Instalacion](#instalacion)
-- [Api](#api)
+- [Tecnologías utilizadas](#install)
+- [Instalación local](#instalacion)
+- [Api en cloud](#api)
 - [Ejemplos](#ejemplos)
 - [Cobertura](#Cobertura)
 - [Consideraciones](#consideraciones)
@@ -22,27 +22,16 @@ El proyecto consiste en generar una API-REST que exponga dos servicios, uno te p
 
 ----
 
-# Arquitectura
-
-  - Es una arquitectura orientada a servicios. Tenemos controlador, servicio, manager, repositorio, excepciones y entidades separadas por su respectivo paquete.
-
-----
-
-
 # Tecnologías y herramientas
 
- * [Java8] - Lenguaje de programación 
- * [Git] - Versionado
- * [Maven] - Paquetización y dependencias
- * [Spring-boot] - Server
+ * [Javascript] - Lenguaje de programación 
+ * [Express] - Paquetización y dependencias
  * [Spring-core] - Framework de trabajo
- * [STS] - Ide de desarrollo
+ * [VSC] - Ide de desarrollo
  * [CloudC9] - Servidor en la nube
  * [MongoBD] - Base de datos
  * [GitHub] - Repositorio y manual de uso
- * [JUnit] - Framework para testing
- * [Mockito] - Para Mocker servicios para testing
- * [log4j] - Para manejo de logging
+ * [Jest - Supertest] - Framework para testing
  * [JaCoCo] - Para estudiar cobertura de los test unitarios
 
 
@@ -50,37 +39,25 @@ El proyecto consiste en generar una API-REST que exponga dos servicios, uno te p
 
 # Instalación
 
-- Básicamente se necesita tener esta tecnología instalada en el server.
+- Tegnología necesaria para correr el proyecto.
 
 | Requiere |  |
 | ------ | ------ |
-| Java8 | https://www.java.com/es/download/ |
-| Git | https://git-scm.com/downloads |
-| Maven 3.0.5 | https://maven.apache.org |
-| MongoBd | https://www.mongodb.com |
+| Node | < v16.18.0 |
 
-
-Luego en el espacio de trabajo o workspace clonar el proyecto:
+Clonar el proyecto en el espacio de trabajo:
 ```sh
-$ git clone https://github.com/kelvyns/mutants-service.git
+$ git clone https://github.com/steerven/mutantservice.git
 ```
 
-Luego correr el Maven para generar el aplicativo
+Despues instalar dependencias.
 ```sh
-$ mvn install
+$ npm install
 ```
-
-Después levantar la base de datos Mongodb
+Y por último ejecutar el proyecto.
 ```sh
-$./mongod
+$npm start
 ```
-
-Y por último correr la aplicación
-```sh
-$java -jar ./target/mutants-service-0.1.0.jar
-```
-
-
 
 
 ------
@@ -92,7 +69,7 @@ $java -jar ./target/mutants-service-0.1.0.jar
 
 | DESCRIPCION  | URL | PETICION  | HEADER  | RESPUESTA
 | ------ | ------ | ------ | ------ | ------ |
-| Servicio Mutant | https://mutants-service-kelvyns.c9users.io:8080/mutant | POST | Content-Type: application/json | Devuelve 200 si es mutant o 403 en caso contrario
+| Servicio Mutant | https://mutants-service-kelvyns.c9users.io:8080/mutant | POST | Content-Type: application/json | Devuelve 200 si es mutant o 403 si no lo es.
 | Servicio Stats | https://mutants-service-kelvyns.c9users.io:8080/stats | GET |   | JSON
 
 ------
@@ -114,15 +91,14 @@ $java -jar ./target/mutants-service-0.1.0.jar
 	
 	2) SERVICIO: stats
 	   RESPONSE: 200 - OK 
-	{ "count_mutant_dna": 10, "count_human_dna": 2, "ratio": 5}	
+	{ "count_mutant_dna": 1, "count_human_dna": 2, "ratio": 0.5}	
 
 ------
 
-# Cobertura
+# Cobertura de codigo
 
- - Se realizaron los test con Junit4 con JaCoCo para estudiar la cobertura de los test
+ - Se realizaron los test con Jest y Supertest para verificar que sea mayor al 80%.
 
-[![N|Solid](https://raw.githubusercontent.com/kelvyns/mutants-service/master/coverage-mutant.jpg)](https://github.com/kelvyns/mutants-service)
 ------
 
 # Consideraciones
