@@ -5,7 +5,7 @@ const app = require('../app');
 const api = supertest(app);
 const mongoose = require('mongoose');
 const mutantController = (require('../controllers/mutantController'));
-
+const { statsService } = (require('../controllers/statsController'));
 //TEST AUTOMATICOS
 
 beforeAll(()=>{
@@ -52,7 +52,3 @@ describe('Test de estadisticas', ()=>{
     })
 })
 
-
-// test('', async ()=>{
-//     app.
-// })
