@@ -1,0 +1,23 @@
+{
+  "name": "mutants",
+  "version": "1.0.0",
+  "description": "API REST PARA DETECTAR MUTANTES",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test": "jest --coverage"
+  },
+  "author": "LUCAS",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "jest": "^29.2.2",
+    "mongoose": "^6.7.0",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.1"
+  }
+}
