@@ -66,8 +66,9 @@ $npm start
 
 | DESCRIPCION  | URL | PETICION  | HEADER  | RESPUESTA
 | ------ | ------ | ------ | ------ | ------ |
-| Servicio Mutant | https://mutants-service-kelvyns.c9users.io:8080/mutant | POST | Content-Type: application/json | Devuelve 200 si es mutant o 403 si no lo es.
-| Servicio Stats | https://mutants-service-kelvyns.c9users.io:8080/stats | GET |   | JSON
+| Servicio Mutant | https://nice-mechanism-233214.rj.r.appspot.com/mutation | POST | Content-Type: application/json | Devuelve 200 si es mutant o 403 si no lo es.
+| Servicio Stats | https://nice-mechanism-233214.rj.r.appspot.com/stats | GET |   | JSON
+| Documentacion Swagger | https://nice-mechanism-233214.rj.r.appspot.com/docs |  |   | 
 
 ------
 
