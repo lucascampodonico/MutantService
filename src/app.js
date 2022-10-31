@@ -7,6 +7,8 @@ const cors = require("cors");
 const server = require("http").createServer(app);
 const port = process.env.PORT || 3001;
 const swaggerDocs = require('./docs/swagger');
+const rateLimiterUsingThirdParty = require('./middleware/rateLimiter')
+
 
 //IMPORT ROUTES
 const mutantRoute = require("./routes/mutantRoute");
@@ -32,7 +34,9 @@ app.use(function (err, req, res, next) {
     next();
   }
 })
+
 app.use(cors());
+app.use("", rateLimiterUsingThirdParty);
 
 //USE ROUTES
 app.use("", mutantRoute);
