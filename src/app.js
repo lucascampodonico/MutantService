@@ -6,18 +6,20 @@ const app = express();
 const cors = require("cors");
 const server = require("http").createServer(app);
 const port = process.env.PORT || 3001;
+const swaggerDocs = require('./docs/swagger');
 
 //IMPORT ROUTES
 const mutantRoute = require("./routes/mutantRoute");
 const statsRoute = require("./routes/statsRoute");
  
 //CONNECT TO MONGODB
-mongoose.connect( process.env.MONGODB_URI,
-  (err, res) => {
+mongoose.connect( process.env.MONGODB_URI, (err, res) => {
     if (err) return console.log("Error de conexion");
     server.listen(port, function () {
       console.log("Servidor corriendo en puerto " + port);
+      swaggerDocs(app, port);
     });
+
   }
 );
 
