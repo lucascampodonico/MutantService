@@ -1,4 +1,4 @@
-# API REST para detectar mutantes
+# API REST para detectar mutantes #
 
 ---
 
@@ -7,7 +7,7 @@ El proyecto se creo con el fin generar una API-REST que contenga dos servicios
     - 2° Este servicio arroja estadísticas en función de los ADN estudiados. 
 
   ----
-## Contenido
+💻 # Contenido
 
 - [Tecnologías utilizadas](#install)
 - [Instalación local](#instalacion)
@@ -16,25 +16,22 @@ El proyecto se creo con el fin generar una API-REST que contenga dos servicios
 - [Cobertura](#Cobertura)
 - [Consideraciones](#consideraciones)
 - [Mejoras](#mejoras)
-- [License](#license)
 
 ----
 
-# Tecnologías y herramientas
+💻 # Tecnologías y herramientas
 
- * [Javascript] - Lenguaje de programación 
- * [Express] - Paquetización y dependencias
- * [Spring-core] - Framework de trabajo
- * [VSC] - Ide de desarrollo
- * [CloudC9] - Servidor en la nube
- * [MongoBD] - Base de datos
+ * [Javascript] - Lenguaje de programación .
+ * [Express] - Infraestructura de aplicaciones web NodeJS.
+ * [Google App Engine] - Servidor en la nube.
+ * [VSC] - Ide de desarrollo.
+ * [MongoBD] - Base de datos en Atlas.
  * [GitHub] - Repositorio y manual de uso.
  * [Jest - Supertest] - Testing y cobertura de codigo.
 
-
 -------
 
-# Instalación
+💻 # Instalación
 
 - Tegnología necesaria para correr el proyecto.
 
@@ -43,23 +40,23 @@ El proyecto se creo con el fin generar una API-REST que contenga dos servicios
 | Node | < v16.18.0 |
 
 Clonar el proyecto en el espacio de trabajo:
-```sh
-$ git clone https://github.com/steerven/mutantservice.git
+```bash
+git clone https://github.com/steerven/mutantservice.git
 ```
 
 Despues instalar dependencias.
-```sh
-$ npm install
+```bash
+npm install
 ```
 Y por último ejecutar el proyecto.
-```sh
-$npm start
+```bash
+npm start
 ```
 
 
 ------
 
-# API
+💻 # API
 
 - La aplicación está configurada por defecto en el puesto 8080, este se puede cambiar el el archivo de applicacion.properties por el puerto de su preferencia.
 - Actualmente hay una instancia de la aplicación corriendo en un servidor de cloudC9.
@@ -72,40 +69,21 @@ $npm start
 
 ------
 
-# Ejemplos 
+💻 # Ejemplos 
 
-
-	1) SERVICIO: mutant 
-  	   REQUEST: [TYPE POST; HEADER Content-Type: application/json]
-    	{
-    	"dna": ["ATGCGA",
-    		"CAGTGG",
-    		"TCCCCT",
-    		"ATAGGG",
-    		"CCTAAA",
-    		"TCATTG"
-    	]}
-	   RESPONSE: 200 - OK
-	
-	2) SERVICIO: stats
-	   RESPONSE: 200 - OK 
-	{ "count_mutant_dna": 1, "count_human_dna": 2, "ratio": 0.5}	
+Puede ver y probar los ejemplos en la doc 
+| https://nice-mechanism-233214.rj.r.appspot.com/stats |
 
 ------
 
-# Cobertura de codigo
+💻 # Cobertura de codigo
 
  - Se realizaron los test con Jest y Supertest para verificar que sea mayor al 80%.
 
 ------
 
-# Consideraciones
-- Se validaron las diferentes secuencias de una matriz de DNA.
-- Se validó la estructura respetara la uniformidad NxN
-- Se colocó como condición mínima para que el DNA sea de mutante que se obtuvieron al menos 2 secuencias de 4 caracteres seguidos en la matriz de DNA
-- La secuencia de DNA es estudiada primero en forma vertical de izquierda a derecha, luego horizontal de arriba a abajo,
-luego inclinada de izquierda a derecha de abajo para arriba y de arriba para abajo.
-- Hay dos servicios expuestos para poder ver listado de ADN estudiados y para poder limpiar la Base de Datos, si bien esto no es una buena práctica, permitirá al evaluador probar mas fácil, comparar y limpiar la BD rápidamente (Para verlos hay que entrar en la app :P).
+💻 # Consideraciones
+
 - En cuanto a el punto "Tener en cuenta que la API puede recibir fluctuaciones agresivas de tráfico 
  (Entre 100 y 1 millón de peticiones por segundo)"; Hay varias consideraciones a tener en cuenta, 
   no se puede tener una respuesta concreta con tan poca información:
@@ -128,13 +106,8 @@ luego inclinada de izquierda a derecha de abajo para arriba y de arriba para aba
   de costo que tan rápido se puede aumentar o reducir esa capacidad cuando sea necesario.
 
 ----
-# Mejoras
+💻 # Mejoras
 - Dependiendo del estudio profundo del tema de las fluctuaciones agresivas, quedaria pendiente 
   definir la estragia a seguir.
 
 ----
-
-# Licencia
-
-
-**Software libre**
