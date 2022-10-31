@@ -74,7 +74,7 @@ Puede ver y probar los ejemplos en la doc https://nice-mechanism-233214.rj.r.app
 💻 Nota importante.
 
 - "Tener en cuenta que la API puede recibir fluctuaciones agresivas de tráfico 
- (Entre 100 y 1 millón de peticiones por segundo)";
+ (Entre 100 y 1 millón de peticiones por segundo)"
     En este punto es necesario recalcar que no depende totalmente del codigo la capacidad de soportar tal cantidad de peticiones.
     Hay muchas variantes para procesar el trafico de las peticiones.
     Se puede poner un Rate Limit si es que aplica, "en este caso para el ejemplo de este proyecto, se utilizo rate limit en 100 por IP", si no aplica, ya entra en juego el hardware necsario para tal nivel de transacciones.
