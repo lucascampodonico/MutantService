@@ -7,6 +7,69 @@ El proyecto se creo con el fin generar una API-REST que contenga dos servicios.
     * 1° Te permite saber si una persona es humana o mutante basandose en su ADN representado por una matriz de NxN caracteres.
     * 2° Este servicio arroja estadísticas en función de los ADN estudiados. 
     
+
+1° Debe recibir como parámetro un array de Strings que representan cada fila de una tabla
+
+de (NxN) con la secuencia del ADN. Las letras de los Strings solo pueden ser: (A,T,C,G), las
+
+cuales representa cada base nitrogenada del ADN. Debes validar que sólo puedas recibir bases nitrogenadas válidas.
+
+ 
+
+Sin mutación:
+
+ 
+
+      A T G C G A
+
+      C A G T G C
+
+      T T A T T T
+
+      A G A C G G
+
+      G C G T C A
+
+      T C A C T G
+
+ 
+
+Con mutación:
+
+ 
+
+      A T G C G A
+
+      C A G T G C
+
+      T T A T G T
+
+      A G A A G G
+
+      C C C C T A
+
+      T C A C T G
+
+ 
+
+Sabrás si existe una mutación si se encuentra más de una secuencia de cuatro letras
+
+iguales, de forma oblicua (diagonal), horizontal o vertical.
+
+Ejemplo (Caso mutación):
+
+      {
+        "dna" = ["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
+      }
+
+ 
+
+En este caso el llamado a la función hasMutation(dna) devuelve “true”.
+
+2° Estadisticas de mutaciones
+
+        En este servicio vemos cuantas verificaciones de ADN se llevo a cabo.
+
 ----
 
 💻 Tecnologías y herramientas
