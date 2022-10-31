@@ -2,9 +2,9 @@
 
 ---
 
-El proyecto se creo con el fin generar una API-REST que contenga dos servicios
-    - 1° Te permite saber si una persona es humana o mutante basandose en su ADN representado por una matriz de NxN caracteres.
-    - 2° Este servicio arroja estadísticas en función de los ADN estudiados. 
+El proyecto se creo con el fin generar una API-REST que contenga dos servicios.
+    * 1° Te permite saber si una persona es humana o mutante basandose en su ADN representado por una matriz de NxN caracteres.
+    * 2° Este servicio arroja estadísticas en función de los ADN estudiados. 
 ----
 
 💻 Tecnologías y herramientas
