@@ -95,7 +95,7 @@ En este caso el llamado a la función hasMutation(dna) devuelve “true”.
 
 Clonar el proyecto en el espacio de trabajo:
 ```bash
-git clone https://github.com/steerven/mutantservice.git
+git clone https://github.com/lucascampodonico/MutantService.git
 ```
 
 Despues instalar dependencias.
